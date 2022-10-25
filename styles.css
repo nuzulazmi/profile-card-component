@@ -1,0 +1,81 @@
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+* {box-sizing: border-box;margin: 0;}
+
+body {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    color: var(--Very-dark-desaturated-blue);
+    background: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 30vh bottom 50vh, left 30vh top 50vh;
+    background-color: var(--Dark-cyan);
+}
+
+main {
+    width: 320px;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px var(--Dark-grayish-blue);
+}
+
+main .card-container img {
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-top: -55px;
+}
+
+main .card-container .name {
+    padding: 1em 0 0.5em;
+}
+
+main .card-container .name span {
+    color: var(--Dark-gray);
+}
+
+main .card-container .name + p {
+    padding: 0 0 2em;
+    font-size: 0.8em;
+    color: var(--Dark-gray);
+}
+
+main .card-container .stats-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5em 0.5em;
+    border-top: 1px solid var(--Dark-gray);
+}
+
+main .card-container .stats-container p {
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+    color: var(--Dark-gray);
+}
+
+@media (min-width: 1080px) {
+    body {
+    background-position: right 85vh bottom 50vh, left 85vh top 50vh;
+    transition: 1s;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+  }
+
+.attribution a {color: hsl(228, 45%, 44%);}
